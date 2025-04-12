@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>APP Producción FRC</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <img id="logo" src="Sp- nueva genLOGO.png" alt="Logo SP Plásticos" />
+
+  <div class="container">
+    <h1>APP Producción FRC</h1>
+
+    <button onclick="pedirContraseña()">Configurar Producción</button>
+
+    <div id="configuracion">
+      <label>Número inicial de equipo:</label>
+      <input type="number" id="equipoInicial" value="1001" />
+
+      <label>Objetivo diario (cantidad de equipos):</label>
+      <input type="number" id="objetivoDiario" value="20" />
+
+      <label>Duración del turno:</label>
+      <select id="duracionTurno">
+        <option value="60">1 hora</option>
+        <option value="540">9 horas</option>
+        <option value="660">11 horas</option>
+      </select>
+
+      <button onclick="iniciarProduccion()">Iniciar Producción</button>
+    </div>
+
+    <div class="info" id="infoProduccion" style="display: none;">
+      <p>Tiempo por equipo: <span id="tiempoPorEquipo"></span> minutos</p>
+      <p>Equipo actual:</p>
+      <div id="equipoActualDisplay">--</div>
+      <p>Próximo equipo en: <span id="temporizador"></span></p>
+      <hr />
+      <div id="resumenTurno"></div>
+      <button id="resetBtn" onclick="resetearProduccion()" style="display: none; margin-top: 10px; font-size: 0.9em; background: #ccc; border: none; padding: 5px 10px; cursor: pointer;">
+        🧹 Resetear Producción
+      </button>      
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

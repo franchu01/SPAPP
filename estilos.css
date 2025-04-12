@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, white, red);
+  min-height: 100vh;
+}
+
+#logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  height: 60px;
+  z-index: 999;
+}
+
+.container {
+  margin-top: 100px;
+  padding: 20px;
+}
+
+input, button, select {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  width: 250px;
+  max-width: 90%;
+}
+
+label {
+  font-size: 18px;
+  display: block;
+  margin-top: 15px;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+.info {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+#configuracion {
+  display: none;
+}
+
+#equipoActualDisplay {
+  font-size: 60px;
+  font-weight: bold;
+  margin: 30px 0;
+}
+
+#temporizador {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 6vw;
+  }
+
+  label, input, button, .info, #temporizador {
+    font-size: 5vw;
+  }
+
+  #equipoActualDisplay {
+    font-size: 12vw;
+  }
+
+  #logo {
+    height: 8vh;
+  }
+}
